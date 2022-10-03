@@ -4,5 +4,6 @@ class Added_Plant < ActiveRecord::Base
 
     def water
         self.last_watered = Time.now
+        self.save
     end
 end
