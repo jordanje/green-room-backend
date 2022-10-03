@@ -13,17 +13,17 @@
 ActiveRecord::Schema.define(version: 2022_10_03_172339) do
 
   create_table "added_plants", force: :cascade do |t|
-    t.string "name"
-    t.string "image"
-    t.string "care_level"
-    t.string "size"
-  end
-
-  create_table "plants", force: :cascade do |t|
     t.integer "plant_id"
     t.integer "room_id"
     t.datetime "added"
     t.datetime "last_watered"
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "care_level"
+    t.string "size"
   end
 
   create_table "rooms", force: :cascade do |t|

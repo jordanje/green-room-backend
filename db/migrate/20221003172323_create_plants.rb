@@ -1,10 +1,10 @@
 class CreatePlants < ActiveRecord::Migration[6.1]
   def change
     create_table :plants do |t|
-      t.integer :plant_id
-      t.integer :room_id
-      t.timestamp :added
-      t.timestamp :last_watered
+      t.string :name
+      t.string :image
+      t.string :care_level
+      t.string :size  
     end
   end
 end
