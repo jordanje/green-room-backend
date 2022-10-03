@@ -11,6 +11,11 @@ class ApplicationController < Sinatra::Base
     plants.to_json
 end 
 
+get "/plants/:id" do
+  plants = Plant.find(params[:id])
+  plants.to_json
+end 
+
 get "/rooms" do
   rooms=Room.all 
   rooms.to_json
@@ -27,4 +32,15 @@ plants=Plant.create(name: params[:name], image: params[:image], care_level: para
 plants.to_json
 end 
 
+delete "/plants/:id" do
+   plants=Plant.find(params[:id])
+   plants.destroy
+   plants.to_json
+end
+
+patch "/plants/:id" do
+  plants=Plant.find(params[:id])
+  plants.update(name: params[:name], image: params[:image], care_level: params[:care_level], size: params[:size])
+  plants.to_json
+end
 end
