@@ -12,17 +12,10 @@ class ApplicationController < Sinatra::Base
     plants.to_json(include: :added_plants)
   end 
 
-
-  get "/plants/:id" do
-    plants = Plant.find(params[:id])
-    plants.to_json
-  end 
-
-get "/rooms" do
-  rooms=Room.all 
-  rooms.to_json
-end
-
+  get "/rooms" do
+    rooms=Room.all 
+    rooms.to_json
+  end
 
   get "/added_plants" do
     added_plants = AddedPlant.all
@@ -54,13 +47,14 @@ end
     newPlants.to_json
   end
 
-
-  delete "/plants/:id" do
-    plants = Plant.find(params[:id])
+  # detete request 
+  delete "/addplants/:id" do
+    plants = AddedPlant.find(params[:id])
     plants.destroy
     plants.to_json
   end
 
+  # patch request 
   patch "/plants/:id" do
     plants = Plant.find(params[:id])
     plants.update(name: params[:name], image: params[:image], care_level: params[:care_level], size: params[:size])
