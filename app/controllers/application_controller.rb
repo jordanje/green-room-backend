@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   # GET requests
   get "/plants" do
     plants = Plant.all
-    plants.to_json
+    plants.to_json(include: :added_plants)
   end 
 
 
@@ -25,13 +25,13 @@ end
 
 
   get "/added_plants" do
-    added_plants = Added_Plant.all
+    added_plants = AddedPlant.all
     added_plants.to_json
   end
 
   get '/rooms/:id/added_plants' do
-    room = Room.find(params[:id]).plant_info
-    room.to_json
+    room = Room.find(params[:id]).added_plants
+    room.to_json(include: :plant)
   end
   
   # POST requests
@@ -41,9 +41,18 @@ end
   end
   
   post "/plants/new" do
-    plants=Plant.create(name: params[:name], image: params[:image], care_level: params[:care_level], size: params[:size])
+    plants = Plant.create(name: params[:name], image: params[:image], care_level: params[:care_level], size: params[:size])
     plants.to_json
   end 
+
+  post "/added_plants" do
+    newPlant = AddedPlant.create(
+      plant_id: params[:plant_id],
+      room_id: params[:room_id],
+      added: Time.now
+      )
+    newPlants.to_json
+  end
 
 
   delete "/plants/:id" do
@@ -58,5 +67,10 @@ end
     plants.to_json
   end
 
+  patch "/added_plants/:id" do
+    plant = AddedPlant.find(params[:id])
+    plant.update(last_watered: Time.now)
+    plant.to_json
+  end
 
 end

@@ -5,4 +5,5 @@ class Room < ActiveRecord::Base
     def plant_info
         self.added_plants.map{ |p| Plant.find(p.plant_id)}
     end
-end
+
+end 
