@@ -1,4 +1,4 @@
-class Added_Plant < ActiveRecord::Base
+class AddedPlant < ActiveRecord::Base
     belongs_to :room
     belongs_to :plant
 
@@ -6,4 +6,6 @@ class Added_Plant < ActiveRecord::Base
         self.last_watered = Time.now
         self.save
     end
+
+   
 end
