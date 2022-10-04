@@ -13,8 +13,8 @@ class ApplicationController < Sinatra::Base
   end 
 
 
-  get "/plants/:id" do
-    plants = Plant.find(params[:id])
+  get "/addplants/:id" do
+    plants = AddedPlant.find(params[:id])
     plants.to_json
   end 
 
@@ -55,8 +55,8 @@ end
   end
 
 
-  delete "/plants/:id" do
-    plants=Plant.find(params[:id])
+  delete "/addplants/:id" do
+    plants=AddedPlant.find(params[:id])
     plants.destroy
     plants.to_json
   end
