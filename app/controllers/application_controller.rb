@@ -12,15 +12,17 @@ class ApplicationController < Sinatra::Base
     plants.to_json
   end 
 
+
   get "/plants/:id" do
     plants = Plant.find(params[:id])
     plants.to_json
   end 
 
-  get "/rooms" do
-    rooms = Room.all 
-    rooms.to_json
-  end 
+get "/rooms" do
+  rooms=Room.all 
+  rooms.to_json
+end
+
 
   get "/added_plants" do
     added_plants = Added_Plant.all
