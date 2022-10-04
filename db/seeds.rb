@@ -113,10 +113,10 @@ Room.create(name: "Bedroom")
 Room.create(name: "Kitchen")
 Room.create(name: "Living Room")
 
-Added_Plant.create(plant: Plant.find_by(name: "Spider"), room: Room.find_by(name: "Kitchen"), added: Time.now)
-Added_Plant.create(plant: Plant.find_by(name: "Prayer"), room: Room.find_by(name: "Kitchen"), added: Time.now)
-Added_Plant.create(plant: Plant.find_by(name: "Aloe Vera"), room: Room.find_by(name: "Bedroom"), added: Time.now)
-Added_Plant.create(plant: Plant.find_by(name: "Monstera"), room: Room.find_by(name: "Bedroom"), added: Time.now)
-Added_Plant.create(plant: Plant.find_by(name: "Cactus"), room: Room.find_by(name: "Living Room"), added: Time.now)
+AddedPlant.create(plant: Plant.find_by(name: "Spider"), room: Room.find_by(name: "Kitchen"), added: Time.now)
+AddedPlant.create(plant: Plant.find_by(name: "Prayer"), room: Room.find_by(name: "Kitchen"), added: Time.now)
+AddedPlant.create(plant: Plant.find_by(name: "Aloe Vera"), room: Room.find_by(name: "Bedroom"), added: Time.now)
+AddedPlant.create(plant: Plant.find_by(name: "Monstera"), room: Room.find_by(name: "Bedroom"), added: Time.now)
+AddedPlant.create(plant: Plant.find_by(name: "Cactus"), room: Room.find_by(name: "Living Room"), added: Time.now)
 
 puts "✅ Done seeding!"
