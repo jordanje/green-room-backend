@@ -3,8 +3,9 @@ class AddedPlant < ActiveRecord::Base
     belongs_to :plant
 
     def water
-        self.last_watered = Time.now
-        self.save
+        watered = self.last_watered = Time.now
+        watered.strftime("%d/%m/%Y %H:%M")
+        watered.save
     end
 
    

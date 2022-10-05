@@ -113,10 +113,10 @@ Room.create(name: "Bedroom")
 Room.create(name: "Kitchen")
 Room.create(name: "Living Room")
 
-AddedPlant.create(plant: Plant.find_by(name: "Spider"), room: Room.find_by(name: "Kitchen"), added: Time.now)
-AddedPlant.create(plant: Plant.find_by(name: "Prayer"), room: Room.find_by(name: "Kitchen"), added: Time.now)
-AddedPlant.create(plant: Plant.find_by(name: "Aloe Vera"), room: Room.find_by(name: "Bedroom"), added: Time.now)
-AddedPlant.create(plant: Plant.find_by(name: "Monstera"), room: Room.find_by(name: "Bedroom"), added: Time.now)
-AddedPlant.create(plant: Plant.find_by(name: "Cactus"), room: Room.find_by(name: "Living Room"), added: Time.now)
+AddedPlant.create(plant: Plant.find_by(name: "Spider"), room: Room.find_by(name: "Kitchen"), added: Time.now.strftime("%d/%m/%Y %H:%M"))
+AddedPlant.create(plant: Plant.find_by(name: "Prayer"), room: Room.find_by(name: "Kitchen"), added: Time.now.strftime("%d/%m/%Y %H:%M"))
+AddedPlant.create(plant: Plant.find_by(name: "Aloe Vera"), room: Room.find_by(name: "Bedroom"), added: Time.now.strftime("%d/%m/%Y %H:%M"))
+AddedPlant.create(plant: Plant.find_by(name: "Monstera"), room: Room.find_by(name: "Bedroom"), added: Time.now.strftime("%d/%m/%Y %H:%M"))
+AddedPlant.create(plant: Plant.find_by(name: "Cactus"), room: Room.find_by(name: "Living Room"), added: Time.now.strftime("%d/%m/%Y %H:%M"))
 
 puts "✅ Done seeding!"
