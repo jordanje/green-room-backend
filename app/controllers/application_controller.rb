@@ -66,5 +66,9 @@ class ApplicationController < Sinatra::Base
     plant.update(last_watered: Time.now)
     plant.to_json
   end
-
+  delete "/rooms/:id" do
+    plants = Room.find(params[:id])
+    plants.destroy
+    plants.to_json
+  end
 end
