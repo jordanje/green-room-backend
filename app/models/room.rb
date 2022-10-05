@@ -6,6 +6,8 @@ class Room < ActiveRecord::Base
         self.added_plants.map{ |p| Plant.find(p.plant_id)}
     end
 
-    def 
+    def self.sort_rooms
+        Room.sort
+    end
 
 end 
