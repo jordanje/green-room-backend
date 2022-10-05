@@ -1,5 +1,6 @@
 puts "🌱 Seeding spices..."
 
+
 # Seed your database here
 $plants_data = [
     {
@@ -108,6 +109,7 @@ $plants_data = [
 
 
 $plants_data.each{|p| Plant.create(p)}
+
 
 Room.create(name: "Bedroom")
 Room.create(name: "Kitchen")
