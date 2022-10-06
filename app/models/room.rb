@@ -7,7 +7,7 @@ class Room < ActiveRecord::Base
     end
 
     def self.sort_rooms
-        Room.all.sort{ |a, b| a.name <=> b.name }
+        Room.all.sort{ |a, b| a.name.upcase <=> b.name.upcase }
     end
 
 end 

@@ -55,6 +55,15 @@ class ApplicationController < Sinatra::Base
     plants.to_json
   end
 
+  delete "/rooms/:id" do
+    room = Room.find(params[:id])
+    plants = Room.find(params[:id]).added_plants
+    plants.destroy_all
+    room.destroy
+    room.to_json
+    plants.to_json
+  end
+
   # patch request 
   patch "/plants/:id" do
     plants = Plant.find(params[:id])
@@ -67,9 +76,5 @@ class ApplicationController < Sinatra::Base
     plant.update(last_watered: Time.now)
     plant.to_json
   end
-  delete "/rooms/:id" do
-    plants = Room.find(params[:id])
-    plants.destroy
-    plants.to_json
-  end
+
 end

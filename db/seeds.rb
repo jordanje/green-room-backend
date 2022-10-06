@@ -77,7 +77,7 @@ $plants_data = [
     },
     {
         name: "Prayer",
-        image: "https://media1.giphy.com/media/ebtR4QtiUzKvWKMiB6/giphy.webp?cid=ecf05e47r47n79cypkddcji4xptz425xv7ie9g0uwqcrjocx&rid=giphy.webp&ct=s",
+        image: "https://media4.giphy.com/media/XfhFpIuKochh0aBV7g/giphy.gif?cid=ecf05e47apgpioerxnhc1tckvuzpuu3p7mut554w3c82uon6&rid=giphy.gif&ct=s",
         care_level: "easy",
         size: "small"
     },
