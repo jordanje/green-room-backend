@@ -13,7 +13,8 @@ class ApplicationController < Sinatra::Base
   end 
 
   get "/rooms" do
-    rooms=Room.all 
+    rooms = Room.all.sort_rooms
+    # sorts rooms by alphabetical
     rooms.to_json
   end
 
