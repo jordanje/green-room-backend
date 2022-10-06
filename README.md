@@ -22,33 +22,17 @@ This will run your server on port
 this will set up are backend so it can connect to are front end 
 ### Backend API Endpoints
 
-| Method | Endpoint       | Params                | Description                                          |
-| ------ | -------------- | --------------------- | ---------------------------------------------------- |
-| GET    | /me            |                       | returns logged in user                               |
-| POST   | /signup        |                       | creates a new user profile                           |
-|        |                | username              | user name                                            |
-|        |                | password              | user password                                        |
-|        |                | password_confirmation | user password confirmation                           |
-|        |                | img                   | user image file                                      |
-|        |                | bio                   | user bio                                             |
-| POST   | /login         |                       | creates a user session                               |
-|        |                | username              | user name                                            |
-|        |                | password              | user password                                        |
-| DELETE | /login         |                       | deletes a user session                               |
-| GET    | /workouts      |                       | returns all workouts, if user is authenticated       |
-| GET    | /workouts/:id  |                       | returns a workout, if user is authenticated          |
-| POST   | /workouts      |                       | creates a new workout, if user is authenticated      |
-|        |                | date                  | date of workout                                      |
-|        |                | comments              | workout comments and list of user-selected exercises |
-|        |                | routine_id            | type of routine for this workout (chest, abs, etc)   |
-|        |                | user_id               | user associated this workout                         |
-| DELETE | /workouts/:id  |                       | deletes a workout, if user is authenticated          |
-| PATCH  | /workouts/:id  |                       | updates a workout, if user is authenticated          |
-|        |                | comments              | workout comments and list of user-selected exercises |
-| GET    | /exercises     |                       | returns all exercises                                |
-| GET    | /exercises/:id |                       | returns an exercise                                  |
-| GET    | /routines      |                       | returns all routines                                 |
-| GET    | /routines/:id  |                       | returns a routine with associated exercises          |
+| Method | Endpoint       | Params                | Description                                     
+| ------ | -------------- | --------------------- | ---------------------------------------------
+| GET    | /plants        |                       | returns saved rooms                                    
+| GET    | /rooms         |                       | returns created rooms                            
+| GET    | /rooms/:id/added_plants | id           | returns rooms with added plants                                             
+| GET    |/added_plants   |                       |returns created added plants 
+| POST   |/plants/new     |name,image,care_level,size| creates a new plant      
+| POST   |/rooms/new      | name                  |creates a new room                               | POST   |/added_plants   | plant_id,room_id      | creates a new added plant                                        
+| DELETE | /rooms/:id      |id                    | deletes created room                           
+| PATCH  |/added_plants/:id| id                   | updated the last timed wated                                     
+| PATCH   |/plants/:id     | id,name,image,care_level,size|updates plants                           
   
   
 
