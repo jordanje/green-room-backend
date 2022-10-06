@@ -8,6 +8,7 @@ This is the backend where we have created the data for are front end for all of 
 
 ## Getting Started
 First you shuld run $ bundle install 
+to install all of are files to get it working 
 
 
 Then you can start your server with:
