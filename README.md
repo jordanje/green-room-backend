@@ -8,11 +8,12 @@ Front end respiratory: https://github.com/jordanje/green-room
 
 
 ## Getting Started
-First you shuld run $ bundle install 
-to install all of the gems
+To install all gems associated with this project run: 
+```console
+$ bundle install
+```
 
 Then you can start your server with:
-
 ```console
 $ bundle exec rake server
 ```
@@ -28,11 +29,11 @@ this will set up are backend so it can connect to are front end
 | GET    | /rooms         |                       | returns created rooms                            
 | GET    | /rooms/:id/added_plants | id           | returns rooms with added plants                                             
 | GET    |/added_plants   |                       |returns created added plants 
-| POST   |/plants/new     |name,image,care_level,size| creates a new plant      
+| POST   |/plants/new     |name, image, care_level, size| creates a new plant      
 | POST   |/rooms/new      | name                  |creates a new room                                                                                      | POST   |/added_plants   | plant_id,room_id      | creates a new added plant                                        
 | DELETE | /rooms/:id      |id                    | deletes created room                           
 | PATCH  |/added_plants/:id| id                   | updated the last timed wated                                     
-| PATCH  |/plants/:id     | id,name,image,care_level,size|updates plants                           
+| PATCH  |/plants/:id     | id, name, image, care_level, size|updates plants                           
   
   
 
