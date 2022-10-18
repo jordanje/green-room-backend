@@ -1,15 +1,15 @@
 # Green room
+Created By Christopher Ou, Jordan Jennings, and Eric jubera 
 
-Are backend api is designed to have collection of plants that we can add to rooms and will full CRUD with it too this is only the backend to are project and we also have a frontend with this api to show off what it can do 
+This API is designed to serve as a destination point for the CRUD capabilities on the front end of an app called Green Room. Green Room is an interactive user experience that allows users to find and add plants to their individual rooms as well as keep track of watering schedules. This API was built with Ruby to create the neccessary methods to customize data, ActiveRecords to easily perform database operations, and Sinatra to create the routes for our front end capabilities. 
 
 ## Front end 
-this is are front end respiratory https://github.com/jordanje/green-room
+Front end respiratory: https://github.com/jordanje/green-room
 
 
 ## Getting Started
 First you shuld run $ bundle install 
-to install all of are files to get it working 
-
+to install all of the gems
 
 Then you can start your server with:
 
@@ -35,5 +35,5 @@ this will set up are backend so it can connect to are front end
 | PATCH  |/plants/:id     | id,name,image,care_level,size|updates plants                           
   
   
-Created By Christopher Ou, Jordan JennigsEric jubera 
+
 
